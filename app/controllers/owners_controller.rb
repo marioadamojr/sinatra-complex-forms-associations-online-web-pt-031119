@@ -20,6 +20,7 @@ class OwnersController < ApplicationController
     if !params[:pet][:name].empty?
       @owner.pets << Pet.create(name: params[:pet][:name])
     end
+    @owner.save
     binding.pry
     redirect "owners/#{owner.id}"
   end
