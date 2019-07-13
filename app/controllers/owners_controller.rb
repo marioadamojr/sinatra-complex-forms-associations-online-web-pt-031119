@@ -1,5 +1,10 @@
 class OwnersController < ApplicationController
 
+
+  get '/' do
+    redirect "owners/new"
+  end
+
   get '/owners' do
     @owners = Owner.all
     erb :'/owners/index'
