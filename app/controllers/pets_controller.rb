@@ -38,6 +38,8 @@ class PetsController < ApplicationController
 
     @pet = Pet.find(params[:id])
     @pet.update(name: params[:pet][:name])
+    @pet.update(name: params[:pet][:name])
+binding.pry
 
     if params[:pet][:owner_ids]
       @pet.owner_id=params[:pet][:owner_ids].first
