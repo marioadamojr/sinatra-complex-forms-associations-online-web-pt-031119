@@ -37,8 +37,9 @@ class PetsController < ApplicationController
     end
 
     @pet = Pet.find(params[:id])
-    # binding.pry
+    binding.pry
     @pet.update(name: params[:pet][:name])
+    binding.pry
     @pet.update(owner: params[:owner][:name])
 
 
