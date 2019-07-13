@@ -1,6 +1,7 @@
 <h1>Update Owner</h1>
 
-<form action="/owners" method="POST">
+<form action="/owners/<%=owner.id%>" method="POST">
+  <input type="hidden" id="hidden" name="_method" value="patch">
   <label>Name:</label>
 
   <br>
