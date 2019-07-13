@@ -16,12 +16,12 @@ class PetsController < ApplicationController
     if params[:pet][:owner_ids]
       @pet.owner_id=params[:pet][:owner_ids].first
     elsif params[:owner_name]
-      @pet.owners << Owner.create(name: params[:owner][:name])
-      # owner = Owner.create(name: params[:owner_name])
-      # @pet.owner = owner
+      owner = Owner.create(name: params[:owner_name])
+      @pet.owner = owner
     end
 
     # if !params[:owner][:name].empty?
+    # @pet.owners << Owner.create(name: params[:owner][:name])
     # end
     redirect to "pets/#{@pet.id}"
   end
