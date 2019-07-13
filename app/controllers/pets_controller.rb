@@ -19,7 +19,7 @@ class PetsController < ApplicationController
       owner = Owner.create(name: params[:owner_name])
       @pet.owner = owner
     end
-
+binding.pry
     # if !params[:owner][:name].empty?
     # @pet.owners << Owner.create(name: params[:owner][:name])
     # end
